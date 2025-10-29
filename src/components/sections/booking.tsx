@@ -41,12 +41,6 @@ export function BookingSection() {
           <BookingForm />
         </div>
 
-        <div className="p-6 bg-gradient-to-b from-black to-black/95 text-white border border-island-teal/20">
-          <p className="text-island-teal font-light text-sm tracking-widest text-center">
-            Experience Amuse-Bouche — A Tease in Every Bite
-          </p>
-        </div>
-
         <div className="border-t border-gray-200 pt-12 mt-12">
           <p className="text-gray-500 font-light text-sm mb-4">Questions? We're here to help.</p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-gray-700">

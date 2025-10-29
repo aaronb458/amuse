@@ -49,7 +49,10 @@ export function BookingForm() {
 
   return (
     <div className="max-w-2xl mx-auto">
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form
+        onSubmit={handleSubmit}
+        className="space-y-6 p-8 bg-white/80 backdrop-blur-sm border-2 border-gold/30 shadow-lg"
+      >
         <div className="grid md:grid-cols-2 gap-6">
           {/* Name Field */}
           <div className="group">
@@ -66,7 +69,7 @@ export function BookingForm() {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 bg-white/5 border border-white/10 text-black focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold transition-all duration-300 font-light"
+              className="w-full px-4 py-3 bg-white/90 border-2 border-gray-200 text-black focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/20 transition-all duration-300 font-light"
               placeholder="Jane Doe"
             />
           </div>
@@ -86,7 +89,7 @@ export function BookingForm() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 bg-white/5 border border-white/10 text-black focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold transition-all duration-300 font-light"
+              className="w-full px-4 py-3 bg-white/90 border-2 border-gray-200 text-black focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/20 transition-all duration-300 font-light"
               placeholder="jane@example.com"
             />
           </div>
@@ -108,7 +111,7 @@ export function BookingForm() {
               value={formData.phone}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 bg-white/5 border border-white/10 text-black focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold transition-all duration-300 font-light"
+              className="w-full px-4 py-3 bg-white/90 border-2 border-gray-200 text-black focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/20 transition-all duration-300 font-light"
               placeholder="+1 (242) 555-0100"
             />
           </div>
@@ -129,7 +132,7 @@ export function BookingForm() {
               onChange={handleChange}
               required
               min={new Date().toISOString().split('T')[0]}
-              className="w-full px-4 py-3 bg-white/5 border border-white/10 text-black focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold transition-all duration-300 font-light"
+              className="w-full px-4 py-3 bg-white/90 border-2 border-gray-200 text-black focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/20 transition-all duration-300 font-light"
             />
           </div>
         </div>
