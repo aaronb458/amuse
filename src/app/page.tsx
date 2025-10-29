@@ -4,6 +4,7 @@ import { DetailsSection } from '@/components/sections/details';
 import { WhySection } from '@/components/sections/why';
 import { BookingSection } from '@/components/sections/booking';
 import { PrepareSection } from '@/components/sections/prepare';
+import { GallerySection } from '@/components/sections/gallery';
 import { FAQSection } from '@/components/sections/faq';
 import { FooterSection } from '@/components/sections/footer';
 
@@ -16,6 +17,7 @@ export default function Home() {
       <WhySection />
       <PrepareSection />
       <BookingSection />
+      <GallerySection />
       <FAQSection />
       <FooterSection />
     </main>

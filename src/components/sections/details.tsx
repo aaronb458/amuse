@@ -35,7 +35,7 @@ export function DetailsSection() {
   ];
 
   return (
-    <section className="py-24 md:py-32 bg-black text-white">
+    <section id="details" className="py-24 md:py-32 bg-black text-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <p className="text-gold text-xs tracking-[0.3em] uppercase mb-6">Experience Details</p>

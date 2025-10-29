@@ -4,13 +4,13 @@ import Image from 'next/image';
 
 export function AboutSection() {
   return (
-    <section className="py-24 md:py-32 bg-white">
+    <section id="about" className="py-24 md:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           {/* Image */}
           <div className="order-2 md:order-1 relative h-96 md:h-[500px]">
             <Image
-              src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80"
+              src="/images/background-2.jpeg"
               alt="Chef plating food"
               fill
               className="object-cover"

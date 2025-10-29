@@ -1,16 +1,28 @@
 'use client';
 
+import Image from 'next/image';
+
 export function BookingSection() {
   return (
-    <section className="py-24 md:py-32 bg-white">
+    <section id="booking" className="relative py-24 md:py-32 overflow-hidden">
+      {/* Background image with low opacity */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/IMG_2735.jpeg"
+          alt="Background"
+          fill
+          className="object-cover opacity-10"
+          sizes="100vw"
+        />
+      </div>
       {/* Decorative island element */}
-      <div className="mb-12 flex justify-center gap-2">
+      <div className="relative z-10 mb-12 flex justify-center gap-2">
         <div className="w-2 h-2 rounded-full bg-island-teal/40" />
         <div className="w-2 h-2 rounded-full bg-gold/40" />
         <div className="w-2 h-2 rounded-full bg-island-teal/40" />
       </div>
 
-      <div className="max-w-4xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <p className="text-island-teal text-xs tracking-[0.3em] uppercase mb-6">Ready?</p>
 
         <h2 className="text-4xl md:text-5xl font-light text-black mb-8">Reserve Your Experience</h2>

@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import { auth } from '@/auth';
 import { AuthSessionProvider } from '@/components/providers/session-provider';
 import { TRPCProvider } from '@/components/providers/trpc-provider';
+import { Header } from '@/components/navigation/header';
 import './globals.css';
 
 const geistSans = Geist({
@@ -16,8 +17,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Amuse Bouche',
-  description: 'A modern Next.js application with tRPC, Prisma, and NextAuth',
+  title: 'Amuse-Bouche | A Tease in Every Bite',
+  description:
+    "The Bahamas' first high-end food tour. An intimate culinary journey through Nassau's finest restaurants.",
 };
 
 export default async function RootLayout({
@@ -31,7 +33,10 @@ export default async function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <AuthSessionProvider session={session}>
-          <TRPCProvider>{children}</TRPCProvider>
+          <TRPCProvider>
+            <Header />
+            {children}
+          </TRPCProvider>
         </AuthSessionProvider>
       </body>
     </html>

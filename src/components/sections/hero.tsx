@@ -4,11 +4,11 @@ import Image from 'next/image';
 
 export function HeroSection() {
   return (
-    <section className="relative w-full h-screen overflow-hidden">
+    <section id="home" className="relative w-full h-screen overflow-hidden">
       {/* Background image with overlay */}
       <div className="absolute inset-0">
         <Image
-          src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1600&q=80"
+          src="/images/Background-Amuse-Bouche.jpg"
           alt="Elegant dining table"
           fill
           className="object-cover"
@@ -20,8 +20,15 @@ export function HeroSection() {
 
       {/* Logo/Brand mark */}
       <div className="absolute top-8 left-8 z-20">
-        <h2 className="text-white font-light text-xl tracking-widest">AMUSE</h2>
-        <p className="text-gold text-xs tracking-[0.2em] mt-1">BOUCHE</p>
+        <div className="relative h-12 w-32">
+          <Image
+            src="/images/Amuse-Bouche-Logo.png"
+            alt="Amuse-Bouche"
+            fill
+            className="object-contain"
+            priority
+          />
+        </div>
       </div>
 
       {/* Content */}

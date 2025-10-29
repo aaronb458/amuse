@@ -4,11 +4,11 @@ import Image from 'next/image';
 
 export function WhySection() {
   return (
-    <section className="relative py-24 md:py-32 overflow-hidden">
+    <section id="why" className="relative py-24 md:py-32 overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80"
+          src="/images/background3.jpeg"
           alt="Scenic bahamas sunset"
           fill
           className="object-cover"

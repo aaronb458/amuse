@@ -37,14 +37,14 @@ export function PrepareSection() {
   ];
 
   return (
-    <section className="py-24 md:py-32 bg-white">
+    <section id="prepare" className="py-24 md:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header with image */}
         <div className="grid md:grid-cols-2 gap-16 items-center mb-20">
           {/* Image */}
           <div className="relative h-96 md:h-[500px] order-2 md:order-1">
             <Image
-              src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80"
+              src="/images/IMG_2723.jpeg"
               alt="Luxury dining experience"
               fill
               className="object-cover"

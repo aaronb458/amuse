@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 export function FooterSection() {
   return (
     <footer className="bg-black text-white py-12 md:py-16 border-t border-island-teal/30">
@@ -7,12 +9,18 @@ export function FooterSection() {
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-island-teal to-transparent opacity-50" />
 
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-4 gap-8 mb-12">
+        <div className="grid md:grid-cols-5 gap-8 mb-12">
           {/* Brand */}
           <div>
-            <h3 className="text-white font-light text-lg tracking-widest mb-2">AMUSE</h3>
-            <p className="text-island-teal text-xs tracking-[0.2em]">BOUCHE</p>
-            <p className="text-white/50 font-light text-sm mt-4 leading-relaxed">
+            <div className="relative h-12 w-32 mb-4">
+              <Image
+                src="/images/Amuse-Bouche-Logo.png"
+                alt="Amuse-Bouche"
+                fill
+                className="object-contain"
+              />
+            </div>
+            <p className="text-white/50 font-light text-sm leading-relaxed">
               A Tease in Every Bite
             </p>
           </div>
@@ -24,18 +32,45 @@ export function FooterSection() {
             </h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="text-white/60 hover:text-white font-light transition">
+                <a href="#about" className="text-white/60 hover:text-white font-light transition">
                   About
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/60 hover:text-white font-light transition">
+                <a href="#details" className="text-white/60 hover:text-white font-light transition">
                   Details
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/60 hover:text-white font-light transition">
+                <a href="#why" className="text-white/60 hover:text-white font-light transition">
+                  Why Us
+                </a>
+              </li>
+              <li>
+                <a href="#prepare" className="text-white/60 hover:text-white font-light transition">
                   Preparation
+                </a>
+              </li>
+              <li>
+                <a href="#gallery" className="text-white/60 hover:text-white font-light transition">
+                  Gallery
+                </a>
+              </li>
+              <li>
+                <a href="#faq" className="text-white/60 hover:text-white font-light transition">
+                  FAQ
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Booking */}
+          <div>
+            <h4 className="text-gold text-xs tracking-widest uppercase mb-4 font-light">Booking</h4>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a href="#booking" className="text-white/60 hover:text-white font-light transition">
+                  Reserve Now
                 </a>
               </li>
             </ul>
@@ -85,7 +120,7 @@ export function FooterSection() {
         {/* Divider */}
         <div className="border-t border-white/10 py-8">
           <p className="text-white/40 text-xs font-light text-center tracking-widest">
-            © 2024 AMUSE-BOUCHE. A Tease in Every Bite. All Rights Reserved.
+            © 2025 AMUSE-BOUCHE. A Tease in Every Bite. All Rights Reserved.
           </p>
         </div>
       </div>
