@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { BookingForm } from '@/components/forms/booking-form';
 
 export function BookingSection() {
   return (
@@ -35,18 +36,16 @@ export function BookingSection() {
           Spots are limited — and once you've experienced it, you'll understand why.
         </p>
 
-        <div className="mb-12 p-8 bg-gradient-to-b from-black to-black/95 text-white border border-island-teal/20">
-          <p className="font-light text-lg leading-relaxed">
-            Book now. Taste the art of indulgence.
-          </p>
-          <p className="text-island-teal font-light text-base mt-4 tracking-widest">
+        {/* Booking Form */}
+        <div className="mb-12">
+          <BookingForm />
+        </div>
+
+        <div className="p-6 bg-gradient-to-b from-black to-black/95 text-white border border-island-teal/20">
+          <p className="text-island-teal font-light text-sm tracking-widest text-center">
             Experience Amuse-Bouche — A Tease in Every Bite
           </p>
         </div>
-
-        <button className="px-12 py-4 bg-black text-white hover:bg-gold hover:text-black font-light tracking-widest uppercase text-sm transition-all duration-300 mb-8">
-          Book Your Table
-        </button>
 
         <div className="border-t border-gray-200 pt-12 mt-12">
           <p className="text-gray-500 font-light text-sm mb-4">Questions? We're here to help.</p>
