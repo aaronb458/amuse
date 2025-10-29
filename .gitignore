@@ -29,6 +29,7 @@
 # misc
 .DS_Store
 *.pem
+memories.json
 
 # debug
 npm-debug.log*
