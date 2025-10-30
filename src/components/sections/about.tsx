@@ -20,33 +20,47 @@ export function AboutSection() {
 
           {/* Content */}
           <div className="order-1 md:order-2">
-            <p className="text-gold text-xs tracking-[0.3em] uppercase mb-6">The Experience</p>
+            <p className="text-gold text-xs tracking-[0.3em] uppercase mb-6">Our Mission</p>
 
             <h2 className="text-4xl md:text-5xl font-light text-black mb-8 leading-tight">
-              An Indulgent Culinary Journey
+              Amuse Bouche
             </h2>
 
-            <p className="text-gray-600 font-light text-lg mb-6 leading-relaxed">
-              Welcome to Amuse-Bouche, the Bahamas' first and only high-end food tour — a private,
-              sensory experience that celebrates taste, sophistication, and discovery.
-            </p>
+            <div className="space-y-8">
+              {/* Motto */}
+              <div>
+                <h3 className="text-gold text-sm font-semibold uppercase tracking-wide mb-3">
+                  Motto
+                </h3>
+                <p className="text-gray-700 font-light text-xl italic leading-relaxed">
+                  A Tease in Every Bite
+                </p>
+              </div>
 
-            <p className="text-gray-600 font-light text-base mb-6 leading-relaxed">
-              The name Amuse-Bouche comes from the French phrase meaning "to amuse the mouth." It
-              refers to a single, exquisite bite — a chef's creative introduction meant to awaken
-              your palate and set the tone for what's to come.
-            </p>
+              {/* Mission Statement */}
+              <div>
+                <h3 className="text-gold text-sm font-semibold uppercase tracking-wide mb-3">
+                  Mission Statement
+                </h3>
+                <p className="text-gray-600 font-light text-base leading-relaxed">
+                  To create intimate, memorable culinary experiences that awaken the senses and
+                  celebrate the joy of food, culture, and connection. Each tour is designed to
+                  delight guests with warmth, laughter, and discovery — one tease at a time.
+                </p>
+              </div>
 
-            <p className="text-gray-600 font-light text-base mb-8 leading-relaxed">
-              That spirit of surprise and delight defines this tour. Each stop reveals one of
-              Nassau's top restaurants, where the chef personally presents three signature dishes —
-              each one a masterpiece of flavor, artistry, and presentation.
-            </p>
-
-            <p className="text-gray-700 font-light italic text-base">
-              "It's an experience worth every penny — filling, yet leaving you craving just one more
-              bite."
-            </p>
+              {/* Vision Statement */}
+              <div>
+                <h3 className="text-gold text-sm font-semibold uppercase tracking-wide mb-3">
+                  Vision Statement
+                </h3>
+                <p className="text-gray-600 font-light text-base leading-relaxed">
+                  To share the beauty of Bahamian and Caribbean hospitality through taste and
+                  storytelling, becoming the most sought-after food experience in the islands —
+                  where every bite feels like a celebration.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

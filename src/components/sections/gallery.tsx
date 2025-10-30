@@ -103,6 +103,22 @@ const galleryImages = [
     src: '/images/WhatsApp Image 2025-10-28 at 19.42.55.jpeg',
     alt: 'Culinary delight 37',
   },
+  {
+    src: '/images/WhatsApp Image 2025-10-29 at 20.45.44 (1).jpeg',
+    alt: 'Culinary delight 38',
+  },
+  {
+    src: '/images/WhatsApp Image 2025-10-29 at 20.45.44.jpeg',
+    alt: 'Culinary delight 39',
+  },
+  {
+    src: '/images/WhatsApp Image 2025-10-29 at 20.45.45.jpeg',
+    alt: 'Culinary delight 40',
+  },
+  {
+    src: '/images/image (32).png',
+    alt: 'Culinary delight 41',
+  },
 ];
 
 export function GallerySection() {
