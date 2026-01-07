@@ -104,12 +104,22 @@ export function FooterSection() {
             <h4 className="text-gold text-xs tracking-widest uppercase mb-4 font-light">Follow</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="text-white/60 hover:text-white font-light transition">
+                <a
+                  href="https://www.instagram.com/amusebouchetours"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/60 hover:text-white font-light transition"
+                >
                   Instagram
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/60 hover:text-white font-light transition">
+                <a
+                  href="https://www.facebook.com/amusebouchetours"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/60 hover:text-white font-light transition"
+                >
                   Facebook
                 </a>
               </li>

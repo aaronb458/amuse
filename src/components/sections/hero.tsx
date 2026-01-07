@@ -55,9 +55,12 @@ export function HeroSection() {
             where every bite tells a story, and every detail is designed for indulgence.
           </p>
 
-          <button className="px-10 py-4 bg-gold/90 hover:bg-gold text-black font-light tracking-widest uppercase text-sm transition-all duration-300 hover:shadow-lg">
+          <a
+            href="#booking"
+            className="inline-block px-10 py-4 bg-gold/90 hover:bg-gold text-black font-light tracking-widest uppercase text-sm transition-all duration-300 hover:shadow-lg"
+          >
             Book Your Experience
-          </button>
+          </a>
         </div>
       </div>
 
@@ -69,6 +72,7 @@ export function HeroSection() {
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
+          aria-hidden="true"
         >
           <path
             strokeLinecap="round"

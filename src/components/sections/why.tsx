@@ -50,9 +50,12 @@ export function WhySection() {
           ))}
         </div>
 
-        <button className="px-10 py-4 border border-gold text-gold hover:bg-gold hover:text-black font-light tracking-widest uppercase text-sm transition-all duration-300">
+        <a
+          href="#booking"
+          className="inline-block px-10 py-4 border border-gold text-gold hover:bg-gold hover:text-black font-light tracking-widest uppercase text-sm transition-all duration-300"
+        >
           Reserve Now
-        </button>
+        </a>
       </div>
     </section>
   );
