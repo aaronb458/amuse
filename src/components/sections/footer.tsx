@@ -101,11 +101,13 @@ export function FooterSection() {
 
           {/* Social */}
           <div>
-            <h4 className="text-gold text-xs tracking-widest uppercase mb-4 font-light">Follow</h4>
+            <h4 className="text-gold text-xs tracking-widest uppercase mb-4 font-light">
+              Follow Us
+            </h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  href="https://www.instagram.com/amusebouchetours"
+                  href="https://www.instagram.com/amusebouchetours?igsh=MWFjcTV6OXRxZnVwZA=="
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white/60 hover:text-white font-light transition"
@@ -115,12 +117,51 @@ export function FooterSection() {
               </li>
               <li>
                 <a
-                  href="https://www.facebook.com/amusebouchetours"
+                  href="https://www.facebook.com/profile.php?id=61585394240320"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white/60 hover:text-white font-light transition"
                 >
                   Facebook
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.tripadvisor.com/Profile/amusebouchetours"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/60 hover:text-white font-light transition"
+                >
+                  TripAdvisor
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Reviews */}
+          <div>
+            <h4 className="text-gold text-xs tracking-widest uppercase mb-4 font-light">
+              Leave a Review
+            </h4>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a
+                  href="https://share.google/Pyfx2dTVucQAKaAnk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/60 hover:text-white font-light transition"
+                >
+                  Google Reviews
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.tripadvisor.com/Profile/amusebouchetours"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/60 hover:text-white font-light transition"
+                >
+                  TripAdvisor
                 </a>
               </li>
             </ul>

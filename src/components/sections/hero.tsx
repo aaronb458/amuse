@@ -18,19 +18,6 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-black/50" />
       </div>
 
-      {/* Logo/Brand mark */}
-      <div className="absolute top-8 left-8 z-20">
-        <div className="relative h-12 w-32">
-          <Image
-            src="/images/Amuse-Bouche-Logo.png"
-            alt="Amuse-Bouche"
-            fill
-            className="object-contain"
-            priority
-          />
-        </div>
-      </div>
-
       {/* Content */}
       <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
         <div className="max-w-3xl">
