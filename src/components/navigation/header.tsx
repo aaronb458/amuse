@@ -23,6 +23,7 @@ export function Header() {
     { href: '#booking', label: 'Book Now' },
     { href: '#gallery', label: 'Gallery' },
     { href: '#faq', label: 'FAQ' },
+    { href: '/waiver', label: 'Waiver' },
   ];
 
   return (
