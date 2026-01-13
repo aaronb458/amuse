@@ -4,37 +4,48 @@ import { useState } from 'react';
 
 type GuestSignature = {
   name: string;
+  signature: string;
   date: string;
 };
 
+const MAX_GUESTS = 20;
+
 export function WaiverForm() {
-  const [signatures, setSignatures] = useState<GuestSignature[]>([
-    { name: '', date: new Date().toISOString().split('T')[0] },
-  ]);
+  // Main contact info
+  const [contactName, setContactName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [tourDate, setTourDate] = useState('');
+
+  // Guest signatures
+  const [guests, setGuests] = useState<GuestSignature[]>([
+    { name: '', signature: '', date: new Date().toISOString().split('T')[0] },
+  ]);
+
   const [agreed, setAgreed] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
 
-  const addSignature = () => {
-    if (signatures.length < 12) {
-      setSignatures([...signatures, { name: '', date: new Date().toISOString().split('T')[0] }]);
+  const addGuest = () => {
+    if (guests.length < MAX_GUESTS) {
+      setGuests([
+        ...guests,
+        { name: '', signature: '', date: new Date().toISOString().split('T')[0] },
+      ]);
     }
   };
 
-  const removeSignature = (index: number) => {
-    if (signatures.length > 1) {
-      setSignatures(signatures.filter((_, i) => i !== index));
+  const removeGuest = (index: number) => {
+    if (guests.length > 1) {
+      setGuests(guests.filter((_, i) => i !== index));
     }
   };
 
-  const updateSignature = (index: number, field: keyof GuestSignature, value: string) => {
-    const updated = [...signatures];
+  const updateGuest = (index: number, field: keyof GuestSignature, value: string) => {
+    const updated = [...guests];
     updated[index] = { ...updated[index], [field]: value };
-    setSignatures(updated);
+    setGuests(updated);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -42,9 +53,8 @@ export function WaiverForm() {
     setError('');
 
     // Validation
-    const hasEmptyNames = signatures.some((sig) => !sig.name.trim());
-    if (hasEmptyNames) {
-      setError('Please fill in all guest names.');
+    if (!contactName.trim()) {
+      setError('Please provide the main contact name.');
       return;
     }
 
@@ -55,6 +65,12 @@ export function WaiverForm() {
 
     if (!tourDate) {
       setError('Please select your tour date.');
+      return;
+    }
+
+    const hasEmptyGuests = guests.some((g) => !g.name.trim() || !g.signature.trim());
+    if (hasEmptyGuests) {
+      setError('Please fill in name and signature for all guests.');
       return;
     }
 
@@ -72,10 +88,12 @@ export function WaiverForm() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          signatures,
+          contactName,
           email,
           phone,
           tourDate,
+          guests,
+          guestCount: guests.length,
           submittedAt: new Date().toISOString(),
         }),
       });
@@ -109,41 +127,60 @@ export function WaiverForm() {
 
   return (
     <form onSubmit={handleSubmit} className="max-w-2xl mx-auto">
-      {/* Contact Information */}
-      <div className="mb-8">
-        <h3 className="text-lg font-semibold text-black mb-4">Contact Information</h3>
-        <div className="grid md:grid-cols-2 gap-4">
+      {/* Main Contact Information */}
+      <div className="mb-10 p-6 bg-gray-50 border border-gray-200">
+        <h3 className="text-lg font-semibold text-black mb-4">Main Contact Information</h3>
+        <p className="text-gray-500 text-sm mb-4">
+          Please provide the primary contact details for your group.
+        </p>
+
+        <div className="space-y-4">
           <div>
-            <label className="block text-sm text-gray-600 mb-2">Email Address *</label>
+            <label className="block text-sm text-gray-600 mb-2">Full Name *</label>
             <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              type="text"
+              value={contactName}
+              onChange={(e) => setContactName(e.target.value)}
               className="w-full px-4 py-3 border border-gray-300 focus:border-gold focus:outline-none"
-              placeholder="your@email.com"
+              placeholder="Your full name"
               required
             />
           </div>
+
+          <div className="grid md:grid-cols-2 gap-4">
+            <div>
+              <label className="block text-sm text-gray-600 mb-2">Email Address *</label>
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="w-full px-4 py-3 border border-gray-300 focus:border-gold focus:outline-none"
+                placeholder="your@email.com"
+                required
+              />
+            </div>
+            <div>
+              <label className="block text-sm text-gray-600 mb-2">Phone Number</label>
+              <input
+                type="tel"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                className="w-full px-4 py-3 border border-gray-300 focus:border-gold focus:outline-none"
+                placeholder="+1 (242) 000-0000"
+              />
+            </div>
+          </div>
+
           <div>
-            <label className="block text-sm text-gray-600 mb-2">Phone Number</label>
+            <label className="block text-sm text-gray-600 mb-2">Tour Date *</label>
             <input
-              type="tel"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
+              type="date"
+              value={tourDate}
+              onChange={(e) => setTourDate(e.target.value)}
               className="w-full px-4 py-3 border border-gray-300 focus:border-gold focus:outline-none"
-              placeholder="+1 (242) 000-0000"
+              required
             />
           </div>
-        </div>
-        <div className="mt-4">
-          <label className="block text-sm text-gray-600 mb-2">Tour Date *</label>
-          <input
-            type="date"
-            value={tourDate}
-            onChange={(e) => setTourDate(e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 focus:border-gold focus:outline-none"
-            required
-          />
         </div>
       </div>
 
@@ -151,54 +188,72 @@ export function WaiverForm() {
       <div className="mb-8">
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-semibold text-black">Guest Signatures</h3>
-          {signatures.length < 12 && (
+          {guests.length < MAX_GUESTS && (
             <button
               type="button"
-              onClick={addSignature}
+              onClick={addGuest}
               className="text-gold hover:text-black text-sm font-light underline"
             >
               + Add Another Guest
             </button>
           )}
         </div>
-        <p className="text-gray-500 text-sm mb-4">
-          Please have each guest in your party sign below (maximum 12 per form).
+        <p className="text-gray-500 text-sm mb-6">
+          Each guest must provide their name, signature (type your full name), and date. Maximum{' '}
+          {MAX_GUESTS} guests per form.
         </p>
 
-        <div className="space-y-4">
-          {signatures.map((sig, index) => (
-            <div key={index} className="flex gap-4 items-start">
-              <div className="flex-1">
-                <label className="block text-sm text-gray-600 mb-2">
-                  Guest {index + 1} Full Name *
-                </label>
-                <input
-                  type="text"
-                  value={sig.name}
-                  onChange={(e) => updateSignature(index, 'name', e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 focus:border-gold focus:outline-none"
-                  placeholder="Full legal name"
-                  required
-                />
+        <div className="space-y-6">
+          {guests.map((guest, index) => (
+            <div key={index} className="p-4 border border-gray-200 bg-white">
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-gold text-sm font-semibold uppercase tracking-wide">
+                  Guest {index + 1}
+                </span>
+                {guests.length > 1 && (
+                  <button
+                    type="button"
+                    onClick={() => removeGuest(index)}
+                    className="text-gray-400 hover:text-red-500 text-sm"
+                  >
+                    Remove
+                  </button>
+                )}
               </div>
-              <div className="w-40">
-                <label className="block text-sm text-gray-600 mb-2">Date</label>
-                <input
-                  type="date"
-                  value={sig.date}
-                  onChange={(e) => updateSignature(index, 'date', e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 focus:border-gold focus:outline-none"
-                />
+
+              <div className="grid md:grid-cols-3 gap-4">
+                <div>
+                  <label className="block text-sm text-gray-600 mb-2">Full Name *</label>
+                  <input
+                    type="text"
+                    value={guest.name}
+                    onChange={(e) => updateGuest(index, 'name', e.target.value)}
+                    className="w-full px-4 py-3 border border-gray-300 focus:border-gold focus:outline-none"
+                    placeholder="Full legal name"
+                    required
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm text-gray-600 mb-2">Signature *</label>
+                  <input
+                    type="text"
+                    value={guest.signature}
+                    onChange={(e) => updateGuest(index, 'signature', e.target.value)}
+                    className="w-full px-4 py-3 border border-gray-300 focus:border-gold focus:outline-none italic"
+                    placeholder="Type full name as signature"
+                    required
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm text-gray-600 mb-2">Date</label>
+                  <input
+                    type="date"
+                    value={guest.date}
+                    onChange={(e) => updateGuest(index, 'date', e.target.value)}
+                    className="w-full px-4 py-3 border border-gray-300 focus:border-gold focus:outline-none"
+                  />
+                </div>
               </div>
-              {signatures.length > 1 && (
-                <button
-                  type="button"
-                  onClick={() => removeSignature(index)}
-                  className="mt-8 text-gray-400 hover:text-red-500 text-xl"
-                >
-                  &times;
-                </button>
-              )}
             </div>
           ))}
         </div>
