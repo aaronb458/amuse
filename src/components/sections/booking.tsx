@@ -45,8 +45,10 @@ export function BookingSection() {
           <p className="text-gray-500 font-light text-sm mb-4">Questions? We're here to help.</p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-gray-700">
             <div>
-              <p className="text-xs text-gold tracking-widest uppercase mb-1">Phone</p>
-              <p className="font-light text-base">242-815-8687 | +1 (242) 805-0700</p>
+              <p className="text-xs text-gold tracking-widest uppercase mb-1">
+                Call / Text / WhatsApp
+              </p>
+              <p className="font-light text-base">+1 (242) 815-8687</p>
             </div>
             <div className="hidden md:block w-px h-8 bg-gray-300" />
             <div>

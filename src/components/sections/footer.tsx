@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 export function FooterSection() {
   return (
@@ -9,7 +10,7 @@ export function FooterSection() {
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-island-teal to-transparent opacity-50" />
 
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-5 gap-8 lg:gap-12 mb-12">
+        <div className="grid md:grid-cols-6 gap-8 lg:gap-12 mb-12">
           {/* Brand */}
           <div>
             <div className="relative h-12 w-32 mb-4">
@@ -107,12 +108,13 @@ export function FooterSection() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  href="tel:242-815-8687"
+                  href="tel:+1-242-815-8687"
                   className="text-white/60 hover:text-white font-light transition"
                 >
-                  242-815-8687
+                  +1 (242) 815-8687
                 </a>
               </li>
+              <li className="text-white/40 text-xs">Call, Text, or WhatsApp</li>
               <li>
                 <a
                   href="mailto:amusebouchetours@gmail.com"
@@ -159,6 +161,29 @@ export function FooterSection() {
                 >
                   TripAdvisor
                 </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h4 className="text-gold text-xs tracking-widest uppercase mb-4 font-light">Legal</h4>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link
+                  href="/terms"
+                  className="text-white/60 hover:text-white font-light transition"
+                >
+                  Terms & Conditions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/waiver"
+                  className="text-white/60 hover:text-white font-light transition"
+                >
+                  Liability Waiver
+                </Link>
               </li>
             </ul>
           </div>

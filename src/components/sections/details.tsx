@@ -3,18 +3,18 @@
 export function DetailsSection() {
   const details = [
     {
-      label: 'Private Tour',
-      value: 'Intimate and exclusive, limited to 12 guests',
+      label: 'Group Size',
+      value: '12 guests maximum per vehicle (larger groups may be accommodated)',
       icon: '👥',
     },
     {
       label: 'Duration',
-      value: 'Approximately 3½ hours',
+      value: 'Approximately 5 hours',
       icon: '🕒',
     },
     {
       label: 'Restaurant Stops',
-      value: "4 of Nassau's most celebrated establishments",
+      value: "Through 4 of Nassau's most celebrated establishments",
       icon: '🍽️',
     },
     {
@@ -24,7 +24,7 @@ export function DetailsSection() {
     },
     {
       label: 'Transportation',
-      value: 'Private car with front-door service',
+      value: 'We pick your group up at one designated location',
       icon: '🚗',
     },
     {

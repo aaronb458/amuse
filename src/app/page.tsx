@@ -12,12 +12,12 @@ export default function Home() {
   return (
     <main className="w-full">
       <HeroSection />
-      <AboutSection />
       <DetailsSection />
       <WhySection />
       <PrepareSection />
       <BookingSection />
       <GallerySection />
+      <AboutSection />
       <FAQSection />
       <FooterSection />
     </main>

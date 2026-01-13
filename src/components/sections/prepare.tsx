@@ -22,7 +22,7 @@ export function PrepareSection() {
     {
       icon: '🕒',
       title: 'Duration',
-      desc: 'Please allow approximately 3½ hours for your full experience. Every moment is designed to flow effortlessly from one restaurant to the next.',
+      desc: 'Please allow approximately 5 hours for your full experience. Every moment is designed to flow effortlessly from one restaurant to the next.',
     },
     {
       icon: '💙',
