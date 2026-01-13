@@ -60,3 +60,19 @@ model VerificationToken {
 
   @@unique([identifier, token])
 }
+
+// Waiver submissions
+model Waiver {
+  id          String   @id @default(cuid())
+  contactName String
+  email       String
+  phone       String?
+  tourDate    String
+  guestCount  Int
+  guests      Json     // Array of {name, signature, date}
+  submittedAt DateTime @default(now())
+  createdAt   DateTime @default(now())
+
+  @@index([email])
+  @@index([tourDate])
+}
