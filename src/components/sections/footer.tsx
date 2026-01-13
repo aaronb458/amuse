@@ -33,34 +33,46 @@ export function FooterSection() {
             </h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#about" className="text-white/60 hover:text-white font-light transition">
+                <Link
+                  href="/#about"
+                  className="text-white/60 hover:text-white font-light transition"
+                >
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#details" className="text-white/60 hover:text-white font-light transition">
+                <Link
+                  href="/#details"
+                  className="text-white/60 hover:text-white font-light transition"
+                >
                   Details
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#why" className="text-white/60 hover:text-white font-light transition">
+                <Link href="/#why" className="text-white/60 hover:text-white font-light transition">
                   Why Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#prepare" className="text-white/60 hover:text-white font-light transition">
+                <Link
+                  href="/#prepare"
+                  className="text-white/60 hover:text-white font-light transition"
+                >
                   Preparation
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#gallery" className="text-white/60 hover:text-white font-light transition">
+                <Link
+                  href="/#gallery"
+                  className="text-white/60 hover:text-white font-light transition"
+                >
                   Gallery
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#faq" className="text-white/60 hover:text-white font-light transition">
+                <Link href="/#faq" className="text-white/60 hover:text-white font-light transition">
                   FAQ
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -70,9 +82,12 @@ export function FooterSection() {
             <h4 className="text-gold text-xs tracking-widest uppercase mb-4 font-light">Booking</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#booking" className="text-white/60 hover:text-white font-light transition">
+                <Link
+                  href="/#booking"
+                  className="text-white/60 hover:text-white font-light transition"
+                >
                   Reserve Now
-                </a>
+                </Link>
               </li>
             </ul>
             <h4 className="text-gold text-xs tracking-widest uppercase mb-4 mt-6 font-light">

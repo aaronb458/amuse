@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 export function WhySection() {
   return (
@@ -50,12 +51,12 @@ export function WhySection() {
           ))}
         </div>
 
-        <a
-          href="#booking"
+        <Link
+          href="/#booking"
           className="inline-block px-10 py-4 border border-gold text-gold hover:bg-gold hover:text-black font-light tracking-widest uppercase text-sm transition-all duration-300"
         >
           Reserve Now
-        </a>
+        </Link>
       </div>
     </section>
   );

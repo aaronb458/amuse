@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 export function HeroSection() {
   return (
@@ -42,12 +43,12 @@ export function HeroSection() {
             where every bite tells a story, and every detail is designed for indulgence.
           </p>
 
-          <a
-            href="#booking"
+          <Link
+            href="/#booking"
             className="inline-block px-10 py-4 bg-gold/90 hover:bg-gold text-black font-light tracking-widest uppercase text-sm transition-all duration-300 hover:shadow-lg"
           >
             Book Your Experience
-          </a>
+          </Link>
         </div>
       </div>
 

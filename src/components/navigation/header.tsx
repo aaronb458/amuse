@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -15,14 +16,14 @@ export function Header() {
   }, []);
 
   const navLinks = [
-    { href: '#home', label: 'Home' },
-    { href: '#about', label: 'About' },
-    { href: '#details', label: 'Details' },
-    { href: '#why', label: 'Why Us' },
-    { href: '#prepare', label: 'Prepare' },
-    { href: '#booking', label: 'Book Now' },
-    { href: '#gallery', label: 'Gallery' },
-    { href: '#faq', label: 'FAQ' },
+    { href: '/#home', label: 'Home' },
+    { href: '/#about', label: 'About' },
+    { href: '/#details', label: 'Details' },
+    { href: '/#why', label: 'Why Us' },
+    { href: '/#prepare', label: 'Prepare' },
+    { href: '/#booking', label: 'Book Now' },
+    { href: '/#gallery', label: 'Gallery' },
+    { href: '/#faq', label: 'FAQ' },
     { href: '/waiver', label: 'Waiver' },
   ];
 
@@ -35,7 +36,7 @@ export function Header() {
       <nav className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#home" className="group">
+          <Link href="/#home" className="group">
             <div className="relative h-12 w-32">
               <Image
                 src="/images/Amuse-Bouche-Logo.png"
@@ -45,18 +46,18 @@ export function Header() {
                 priority
               />
             </div>
-          </a>
+          </Link>
 
           {/* Navigation Links - Hidden on mobile, visible on desktop */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 className="text-white/80 hover:text-gold font-light text-sm tracking-wide transition-colors duration-200"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -106,12 +107,12 @@ export function Header() {
           </div>
 
           {/* CTA Button */}
-          <a
-            href="#booking"
+          <Link
+            href="/#booking"
             className="px-6 py-2 bg-gold/90 hover:bg-gold text-black font-light tracking-widest uppercase text-xs transition-all duration-300"
           >
             Reserve
-          </a>
+          </Link>
         </div>
       </nav>
     </header>
