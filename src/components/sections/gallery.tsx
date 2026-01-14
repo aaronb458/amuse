@@ -116,8 +116,24 @@ const galleryImages = [
     alt: 'Culinary delight 40',
   },
   {
-    src: '/images/image (32).png',
+    src: '/images/IMG_5529.jpg',
     alt: 'Culinary delight 41',
+  },
+  {
+    src: '/images/IMG_5560.jpg',
+    alt: 'Culinary delight 42',
+  },
+  {
+    src: '/images/IMG_5572.jpg',
+    alt: 'Culinary delight 43',
+  },
+  {
+    src: '/images/IMG_5577.jpg',
+    alt: 'Culinary delight 44',
+  },
+  {
+    src: '/images/IMG_5599.jpg',
+    alt: 'Culinary delight 45',
   },
 ];
 
