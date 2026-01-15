@@ -147,6 +147,14 @@ const galleryImages = [
     src: '/images/WhatsApp Image 2026-01-15 at 08.46.18.jpeg',
     alt: 'Culinary delight 48',
   },
+  {
+    src: '/images/IMG_7503.jpeg',
+    alt: 'Culinary delight 49',
+  },
+  {
+    src: '/images/IMG_7858.jpeg',
+    alt: 'Culinary delight 50',
+  },
 ];
 
 export function GallerySection() {
