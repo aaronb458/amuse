@@ -19,7 +19,47 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'Amuse-Bouche | A Tease in Every Bite',
   description:
-    "The Bahamas' first high-end food tour. An intimate culinary journey through Nassau's finest restaurants.",
+    "The Bahamas' premier luxury food tour experience. Join us for an intimate 5-hour culinary journey through Nassau's finest restaurants. Four restaurants, twelve guests, endless flavor. $175 per person.",
+  keywords: [
+    'Bahamas food tour',
+    'Nassau culinary experience',
+    'luxury food tour',
+    'Bahamas dining',
+    'Nassau restaurants',
+    'culinary journey',
+    'Bahamian cuisine',
+    'food tour Nassau',
+    'gourmet tour Bahamas',
+  ],
+  authors: [{ name: 'Amuse-Bouche Tours' }],
+  openGraph: {
+    title: 'Amuse-Bouche | A Tease in Every Bite',
+    description:
+      "The Bahamas' premier luxury food tour. An intimate 5-hour culinary journey through Nassau's finest restaurants. Four restaurants, twelve guests, endless flavor.",
+    url: 'https://amusebouchetours.com',
+    siteName: 'Amuse-Bouche Tours',
+    images: [
+      {
+        url: '/images/Background-Amuse-Bouche.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Amuse-Bouche - Luxury Food Tour in Nassau, Bahamas',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Amuse-Bouche | A Tease in Every Bite',
+    description:
+      "The Bahamas' premier luxury food tour. Four restaurants, twelve guests, endless flavor.",
+    images: ['/images/Background-Amuse-Bouche.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default async function RootLayout({
