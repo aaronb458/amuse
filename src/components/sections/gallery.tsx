@@ -155,6 +155,18 @@ const galleryImages = [
     src: '/images/IMG_7858.jpeg',
     alt: 'Culinary delight 50',
   },
+  {
+    src: '/images/IMG_4634.jpeg',
+    alt: 'Culinary delight 51',
+  },
+  {
+    src: '/images/IMG_4641.jpeg',
+    alt: 'Culinary delight 52',
+  },
+  {
+    src: '/images/IMG_4712.jpeg',
+    alt: 'Culinary delight 53',
+  },
 ];
 
 export function GallerySection() {
